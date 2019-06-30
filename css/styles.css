@@ -7,58 +7,96 @@ html {
     box-sizing: inherit;
 }
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 a{
-    color: #ef233c;
+    color: #2c3e50;
 }
 a:hover {
+    color: #1dd2af;
     text-decoration: none;
 }
 h1, h2 {
-    font-family: 'Caveat', cursive; 
-    font-weight: 400;
+    font-family: 'Encode Sans Semi Condensed', cursive;         
 }
 h1{
     font-size: 60px;
+    font-weight: 400;
+    color: white;
 }
 h2{
     font-size: 40px;
+    font-weight: 300;
     margin-top: 0;
 }
+main {
+    color: #2c3e50;
+}
+main h2 {
+    font-weight: 400;
+}
+main p {
+    font-size: 17px;
+}
+main h3 {
+    font-size: 20px;
+}
+h3 {
+    margin: 0;
+}
 .content-wrap {
-    max-width: 950px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 60px 50px;
     overflow: hidden;
 }
-.col-narrow {
-    width: 30%;
-    float: left;
-    min-height: 175px;
+.col-wide p {
+    color: #b1bbc9;
 }
-.col-wide {
-    width: 70%;
-    float: left;
-    padding-left: 30px;
-    min-height: 175px;
+.uppercase {
+    text-transform: uppercase;
+}
+.btn {
+    text-decoration: none;
+    background: #1dd2af;
+    color: white;
+    padding: 10px;
+    display: inline;
+}
+.download:hover {
+    background: white;
+}
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    font-size: 17px;
 }
 
 /*Header & Footer
 -------------------------*/
-.profile-img {
-    border-radius: 50%;
 
-}
 header, footer {
-    background: #2b2d42;
-    color: #8d99ae;
+    background: #2c3e50;
+    color: white;
+    font-size: 20px;
 }
 /* header */
+header{
+    padding-top: 50px;
+    position: relative;
+}
 header h1, header h2 {
-    color: #edf2f4;
     margin: 0;
+}
+.profile-img {
+    border-radius: 50%;
+    border: white solid 3px;
+}
+.download{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 /* footer */
 footer {
@@ -67,16 +105,107 @@ footer {
 .contact-info a {
     padding: 10px;
     display: inline-block;
+    color: #1dd2af;
+}
+.contact-info a:hover {
+    color: white;
+}
+#contact p {
+    font-size: 12px;
 }
 
+/* Navigation
+-----------------------------*/
+nav {
+    text-align: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
 /*Work Experience
 -------------------------*/
 .work {
     background: #edf2f4;
 }
 
+h3 ~ p {
+    margin: 0;
+}
+.job-description {
+    margin-bottom: 25px;
+}
+.job-description ul:first-of-type {
+    margin-top: 0;
+}
+/*Skills
+-------------------------*/
+.skills {
+    background: #edf2f4;
+}
+.skills img {
+    width: 80px;
+}
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+.row1 {
+    margin-bottom: 80px;
+}
+.logos img:hover {
+    opacity: 0.5;
+}
+.logo {
+    text-align: center;
+}
+.logo p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    opacity: 0;
+}
+.logo:hover p {
+    opacity: 1;
+}
+
 /*Education
 -------------------------*/
 .education {
-    background: #8d99ae;
+    background: linear-gradient(rgba(141, 153, 174, 0.8),
+                                rgba(141, 153, 174, 0.5)),
+                                url(../images/mountains.jpg) no-repeat fixed;
+    background-size: cover;
+}
+p + h3 {
+    margin-top: 30px;
+}
+
+/* Media Queries
+---------------------*/
+@media (min-width: 900px) {
+    .col-narrow {
+        width: 30%;
+        float: left;
+    }
+    .col-wide {
+        width: 70%;
+        float: left;
+        padding-left: 70px;
+    }
+}
+@media (max-width: 899px) {
+    header {
+        text-align: center;
+    }
+    .profile-img {
+        width: 200px;
+    }
 }
