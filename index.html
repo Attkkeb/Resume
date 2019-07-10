@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Encode+Sans+Semi+Condensed|Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/a3a2a55e76.js"></script>
-</head>
+</head>    
+
 <body>
     <!-- // Intro -->
     <header id="about">
@@ -18,6 +19,11 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="burger" id="menuMobile">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <div class="content-wrap">
             <img class="profile-img col-narrow" src="images/zdjecie.jpg" alt="zdjecie profilowe">
             <div class="col-wide">
@@ -29,6 +35,7 @@
         </div>
         <a href="zasady.pdf" class="btn download" download>Download PDF</a>
     </header>
+
     
     <main> 
         <!-- // Work Experience -->
@@ -183,5 +190,12 @@
             <p>Copyright 2019 by Beata Łochowska</p>
         </div>
     </footer>
+    <script>
+        (function() {
+            document.getElementById("menuMobile").addEventListener("click", function() {
+                document.getElementsByTagName("BODY")[0].classList.toggle("isMenuOpen");
+            });
+        }())
+    </script>
 </body>
 </html>
