@@ -82,7 +82,7 @@ header, footer {
     font-size: 20px;
 }
 /* header */
-header{
+header {
     padding-top: 50px;
     position: relative;
 }
@@ -93,7 +93,7 @@ header h1, header h2 {
     border-radius: 50%;
     border: white solid 3px;
 }
-.download{
+.download {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -122,6 +122,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 nav a {
     display: inline-block;
@@ -157,9 +158,7 @@ h3 ~ p {
     display: flex;
     justify-content: space-between;
 }
-.row1 {
-    margin-bottom: 80px;
-}
+
 .logos img:hover {
     opacity: 0.5;
 }
@@ -174,6 +173,13 @@ h3 ~ p {
 }
 .logo:hover p {
     opacity: 1;
+}
+.skills ul {
+    margin: 0;
+    padding: 0;
+}
+.skills li {
+    width: 80px;
 }
 
 /*Education
@@ -207,5 +213,36 @@ p + h3 {
     }
     .profile-img {
         width: 200px;
+    }
+    ul {
+        padding-top: 20px;
+    }
+}
+@media (max-width: 812px) {
+    #about .content-wrap {
+        margin-top: 60px;
+    }
+    .skills .logo p {
+        display: none;
+    }
+    .logos {
+        flex-wrap: wrap;
+    }
+    .skills li {
+        padding: 5px;
+    }
+}
+@media (max-width: 568px) {
+    #about .content-wrap {
+        margin-top: 120px;
+    }
+    #about h1 {
+        font-size: 40px;
+    }
+    #about h2 {
+        font-size: 30px;
+    }
+    .profile-img {
+        margin-bottom: 25px;
     }
 }
