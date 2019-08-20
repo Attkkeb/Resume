@@ -17,7 +17,9 @@
             <a href="#about">About</a>
             <a href="#work">Work Experience</a>
             <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/dashboard/repositories"><i class="fab fa-bitbucket"></i></a>
         </nav>
         <div class="burger" id="menuMobile">
             <div class="bar1"></div>
@@ -28,12 +30,12 @@
             <img class="profile-img col-narrow" src="images/zdjecie.jpg" alt="zdjecie profilowe">
             <div class="col-wide">
                 <h1>Beata Łochowska</h1>
-                <h2>Junior Full Stack Developer</h2>
-                <p>Hi! Currently I work as a junior full stack developer, but most of all I use HTML, CSS and JavaScript with React. I would like to expand my knowledge of Python, especially Django.</p>
-                <p>Previously, I worked as a graphic designer for two years. I am interested in UI and UX.</p>
+                <h2>Junior Front-End Developer</h2>
+                <p>Hi! Currently I work on a position of junior front-end developer using mainly HTML, CSS and JavaScript with React in my projects. I've started learnig programming from C++ and it gave me strong basics of object oriented programming. I would like to develop as front-end web developer but I am open to lerning other technologies.</p>
+                <p>For two years I was working as a graphic designer, I am interested in topic of UI and UX.</p>
             </div>
         </div>
-        <a target="_blank" rel="noopener noreferrer" href="resume.pdf" class="btn download" download>Download PDF</a>
+        <a href="zasady.pdf" class="btn download" download>Download PDF</a>
     </header>
 
     
@@ -45,7 +47,7 @@
 
                 <!-- Job 1 Details -->
                 <div class="col-narrow">
-                    <h3>Junior Full Stack Developer</h3>
+                    <h3>Junior Front-End Developer</h3>
                     <p class="uppercase">Nokia</p>
                     <p>April 2019 - Present</p>
                 </div>
@@ -84,7 +86,7 @@
                 <h2>Education</h2>
 
                 <!-- School 1 details. -->
-                <h3>Workshops Hacking Carrots: UX for VR/AR</h3>
+                <h3>Workshops Hacking Carrots: UX fr VR/AR</h3>
                 <p>May 2019</p>
                 <p>Two days of creating UX for VR online learning application.</p>
                 
@@ -96,7 +98,7 @@
                 <!-- School 3 details. -->
                 <h3>University of Wroclaw, Practical aspects of software development using C++</h3>
                 <p>February 2019 - June 2019</p>
-                <p>One semester course of mastering programming skills</p>
+                <p>One semester course of mastering programing skills</p>
                 
                 <!-- School 3 details. -->
                 <h3>WIT University in Warsaw, Graphic Desing</h3>
@@ -182,9 +184,9 @@
             <!-- Social media links. Add or remove any networks. -->
             <div class="contact-info">
                 <a target="_blank" rel="noopener noreferrer" href="mailto:beata.lochowska@gmail.com"><i class="fas fa-at"></i></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/beatalochowska/"><i class="fab fa-bitbucket"></i></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/beatalochowska/"><i class="fab fa-linkedin-in"></i></a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.artstation.com/beatalochowska"><i class="fab fa-artstation"></i></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/beatalochowska/"><i class="fab fa-linkedin-in"></i></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/dashboard/repositories"><i class="fab fa-bitbucket"></i></a>
             </div>
 
             <p>Copyright 2019 by Beata Łochowska</p>
@@ -192,6 +194,12 @@
     </footer>
     <script>
         (function() {
+            document.querySelectorAll(".menu a").forEach(function(element) {
+                element.addEventListener("click", function() {
+                    document.getElementsByTagName("BODY")[0].classList.remove("isMenuOpen");
+                });
+            })
+
             document.getElementById("menuMobile").addEventListener("click", function() {
                 document.getElementsByTagName("BODY")[0].classList.toggle("isMenuOpen");
             });
