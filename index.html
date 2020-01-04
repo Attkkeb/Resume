@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beata Lochowska</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed|Encode+Sans+Semi+Condensed|Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/a3a2a55e76.js"></script>
+    <script src="script.js" defer></script>
 </head>    
 
 <body>
     <!-- // Intro -->
-    <header id="about">
-        <nav class="menu">
-            <a href="#about">About</a>
-            <a href="#work">Work Experience</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/beatalochowska/"><i class="fab fa-bitbucket"></i></a>
+    <header id="page-header" class="page-header">
+        <nav class="menu" id="menu">
+            <a class="menu-item" href="#about">About</a>
+            <a class="menu-item" href="#work">Work Experience</a>
+            <a class="menu-item" href="#education">Education</a>
+            <a class="menu-item" href="#skills">Skills</a>
+            <a class="menu-item" href="#contact">Contact</a>
+            <a class="menu-item" target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/%7B8f333b0c-321f-4885-8076-f1b5379929b2%7D/"><i class="fab fa-bitbucket"></i></a>
+            <a href="resume.pdf" target="_blank" class="menu-item download" download>CV <i class="fas fa-arrow-down"></i></a>
         </nav>
         <div class="burger" id="menuMobile">
             <div class="bar1"></div>
@@ -29,13 +31,13 @@
         <div class="content-wrap">
             <img class="profile-img col-narrow" src="images/zdjecie.jpg" alt="zdjecie profilowe">
             <div class="col-wide">
-                <h1>Beata Łochowska</h1>
-                <h2>Junior Front-End Developer</h2>
-                <p>Hi! Currently I work on a position of junior front-end developer using mainly HTML, CSS and JavaScript with React in my projects. I've started learnig programming from C++ and it gave me strong basics of object oriented programming. I would like to develop as front-end web developer but I am open to lerning other technologies.</p>
-                <p>For two years I was working as a graphic designer, I am interested in topic of UI and UX.</p>
+                <h1 class="main-title">Beata Łochowska</h1>
+                <h2 class="title">Junior Front End Developer</h2>
+                <p class="text">Hi! Currently I work on a position of junior software developer using mainly HTML, CSS and JavaScript with React in my projects. I've started learning programming from C++ and it gave me strong basics of object oriented programming. I would like to develop as front-end web developer but I am open to learning other technologies.</p>
+                <p class="text">For two years I was working as a graphic designer, I am interested in topic of UI and UX.</p>
             </div>
         </div>
-        <a href="resume.pdf" class="btn download" download>Download PDF</a>
+        
     </header>
 
     
@@ -43,39 +45,58 @@
         <!-- // Work Experience -->
         <section id="work" class="work">
             <div class="content-wrap">
-                <h2>Work Experience</h2>
+                <h2 class="title">Work Experience</h2>
 
-                <!-- Job 1 Details -->
-                <div class="col-narrow">
-                    <h3>Junior Front-End Developer</h3>
-                    <p class="uppercase">Nokia</p>
-                    <p>April 2019 - Present</p>
+                 <!-- Job 3 Details -->
+                 <div class="col-narrow job-title">
+                    <h3 class="position-title">Junior Software Developer </h3>
+                    <p class="company-title">PolCam Systems WB Group</p>
+                    <p class="text">October 2019 - present</p>
                 </div>
 
                 <div class="col-wide job-description">
-                    <ul>
-                        <li>Creating internal Nokia websites using HTML, CSS and React</li>
-                        <li>Creating UI for internal Nokia websites using Material UI</li>
-                        <li>Working in GIT</li>
-                        <li>Working in SCRUM</li>
+                    <ul class="work-details">
+                        <li class="text">Designing interfaces of dashboards for speed cameras systems using Adobe Xd and Adobe Photoshop.</li>
+                        <li class="text">Programming the graphic user interface using HTML, CSS, JavaScript ES6 and React.</li>
+                        <li class="text">Working using Styled Components.</li>
+                        <li class="text">Working using Material Design.</li>
+                        <li class="text">Working using GIT and JIRA.</li>
                     </ul>
                 </div>
 
                 <!-- Job 2 Details -->
-                <div class="col-narrow">
-                    <h3>Technical Multimedia Designer</h3>
-                    <p class="uppercase">Nokia</p>
-                    <p>March 2017 - March 2019</p>
+                <div class="col-narrow job-title">
+                    <h3 class="position-title">Junior Front-End Developer</h3>
+                    <p class="company-title">Nokia</p>
+                    <p class="text">April 2019 - September 2019</p>
+                </div>
+
+                <div class="col-wide job-description">
+                    <ul class="work-details">
+                        <li class="text">Creating internal Nokia websites using HTML, CSS, JavaScript ES6 and React. </li>
+                        <li class="text">Creating UI using Material UI and Ant Design</li>
+                        <li class="text">Working using Styled Components.</li>
+                        <li class="text">Working using GIT and GitLab.</li>
+                        <li class="text">Working in SCRUM.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 1 Details -->
+                <div class="col-narrow job-title">
+                    <h3 class="position-title">Technical Multimedia Designer</h3>
+                    <p class="company-title">Nokia</p>
+                    <p class="text">March 2017 - March 2019</p>
                 </div>
                 
                 <div class="col-wide job-description">
-                    <ul>
-                        <li>Creating 2D and 3D graphics and multimedia solutions for technical documentation of Nokia radio technology products</li>
-                        <li>Creating short installation movies</li>
-                        <li>Distributing tasks among two other graphic designers in the team</li>
-                        <li>Close cooperation with part of the team from Romania</li>
-                        <li>Recruiting and providing trainings for newcomers</li>
-                        <li>Creating  team logo and UX and UI for team website</li>
+                    <ul class="work-details">
+                        <li class="text">Creating 2D and 3D graphics and multimedia solutions for technical documentation of Nokia radio technology products.</li>
+                        <li class="text">Creating short installation movies.</li>
+                        <li class="text">Creating simple animations using vanilla JavaScript in Adobe Edge Animate.</li>
+                        <li class="text">Distributing tasks among two other graphic designers in the team.</li>
+                        <li class="text">Close cooperation with part of the team from Romania.</li>
+                        <li class="text">Recruiting and providing trainings for newcomers.</li>
+                        <li class="text">Creating team logo and UX and UI for team website.</li>
                     </ul>
                 </div>
             </section>
@@ -83,33 +104,41 @@
         <!-- // Education -->
         <section id="education" class="education">
             <div class="content-wrap">
-                <h2>Education</h2>
+                <h2 class="title">Education</h2>
 
-                <!-- School 1 details. -->
-                <h3>Workshops Hacking Carrots: UX fr VR/AR</h3>
-                <p>May 2019</p>
-                <p>Two days of creating UX for VR online learning application.</p>
-                
-                <!-- School 2 details. -->
-                <h3>Workshop Django Girls</h3>
-                <p>January 2019</p>
-                <p>Two days of creating own blog using Python and Django.</p>
+                <!-- School 7 details. -->
+                <h3 class="school-title">Front End Course DaftAcademy</h3>
+                <p class="text text-date">November 2019 - December 2019</p>
+                <p class="text">Two months of lectures about front end development and creating website using HTML, CSS and vanilla JavaScript.</p>
 
-                <!-- School 3 details. -->
-                <h3>University of Wroclaw, Practical aspects of software development using C++</h3>
-                <p>February 2019 - June 2019</p>
-                <p>One semester course of mastering programing skills</p>
+                <!-- School 6 details. -->
+                <h3 class="school-title">Workshops Hacking Carrots: UX for VR/AR</h3>
+                <p class="text text-date">May 2019</p>
+                <p class="text">Two days of creating UX for VR online learning application.</p>
                 
-                <!-- School 3 details. -->
-                <h3>WIT University in Warsaw, Graphic Desing</h3>
-                <p>October 2017 - June 2019</p>
-                <p>Master degree, specialization: advanced multimedia</p>
+                <!-- School 5 details. -->
+                <h3 class="school-title">Workshop Django Girls</h3>
+                <p class="text text-date">January 2019</p>
+                <p class="text">Two days of creating own blog using Python and Django.</p>
 
                 <!-- School 4 details. -->
-                <h3>Wroclaw University of Science and Technology, Architecture</h3>
-                <p>October 2013 - January 2017</p>
-                <p>Design Thinking course in Austria organized by Erazmus +</p>
-                <p>February 2016</p>
+                <h3 class="school-title">University of Wroclaw, Practical aspects of software development using C++</h3>
+                <p class="text text-date">February 2019 - June 2019</p>
+                <p class="text">One semester course of mastering programing skills</p>
+                
+                <!-- School 3 details. -->
+                <h3 class="school-title">WIT University in Warsaw, Graphic Design</h3>
+                <p class="text text-date">October 2017 - June 2019</p>
+                <p class="text">Master degree, specialization: advanced multimedia</p>
+
+                <!-- School 2 details. -->
+                <h3 class="school-title">Wroclaw University of Science and Technology, Architecture</h3>
+                <p class="text text-date">October 2013 - January 2017</p>
+
+
+                <!-- School 1 details. -->              
+                <h3 class="school-title">Design Thinking course in Austria organized by Erazmus +</h3>
+                <p class="text text-date">February 2016</p>
             </div>
         </section>
     </main>
@@ -117,58 +146,60 @@
     <!-- // Skills -->
     <section id="skills" class="skills">
         <div class="content-wrap">
-            <h2>Skills</h2>
+            <h2 class="title">Skills</h2>
             <ul class="logos">
                 <li class="logo">
-                    <img class="html" src="images/html.png" alt="html">
-                    <p>HTML</p>
+                    <img class="logo-image html" src="images/html.png" alt="html">
+                    <p class="logo-title">HTML</p>
                 </li>
                 <li class="logo">
-                    <img class="css" src="images/css.png" alt="css">
-                    <p>CSS</p>
+                    <img class="logo-image css" src="images/css.png" alt="css">
+                    <p class="logo-title">CSS</p>
                 </li>
                 <li class="logo">
-                    <img class="js" src="images/js.png" alt="js">
-                    <p>JavaScript</p>
+                    <img class="logo-image js" src="images/js.png" alt="js">
+                    <p class="logo-title">JavaScript</p>
                 </li>
                 <li class="logo">
-                    <img class="react" src="images/react.png" alt="react">
-                    <p>React</p>
+                    <img class="logo-image react" src="images/react.png" alt="react">
+                    <p class="logo-title">React</p>
                 </li>
+                
                 <li class="logo">
-                    <img class="typescript" src="images/typescript.png" alt="typescript">
-                    <p>TypeScript</p>
-                </li>
+                    <img class="logo-image material" src="images/material-ui-logo.svg" alt="material ui">
+                    <p class="logo-title">Material UI</p>
+                </li>      
                 <li class="logo">
-                    <img class="material" src="images/material-ui-logo.svg" alt="material ui">
-                    <p>Material UI</p>
-                </li>                 
+                    <img class="logo-image cpp" src="images/cpp.png" alt="cpp">
+                    <p class="logo-title">C++</p>
+                </li>           
             </ul>
 
             <ul class="logos">
+                
                 <li class="logo">
-                    <img class="cpp" src="images/cpp.png" alt="cpp">
-                    <p>C++</p>
+                    <img class="logo-image git" src="images/git.png" alt="git">
+                    <p class="logo-title">GIT</p>
                 </li>
                 <li class="logo">
-                    <img class="git" src="images/git.png" alt="git">
-                    <p>GIT</p>
+                    <img class="logo-image unreal" src="images/unreal.png" alt="unreal">
+                    <p class="logo-title">Unreal Engine</p> 
                 </li>
                 <li class="logo">
-                    <img class="unreal" src="images/unreal.png" alt="unreal">
-                    <p>Unreal Engine</p> 
+                    <img class="logo-image xd" src="images/xd.png" alt="xd">
+                    <p class="logo-title">Adobe Xd</p>
                 </li>
                 <li class="logo">
-                    <img class="photoshop" src="images/photoshop.svg" alt="photoshop">
-                    <p>Photoshop</p>
+                    <img class="logo-image photoshop" src="images/photoshop.svg" alt="photoshop">
+                    <p class="logo-title">Adobe Photoshop</p>
                 </li>
                 <li class="logo">
-                    <img class="illustrator" src="images/illustrator.svg" alt="illustrator">
-                    <p>Illustrator</p>
+                    <img class="logo-image illustrator" src="images/illustrator.svg" alt="illustrator">
+                    <p class="logo-title">Adobe Illustrator</p>
                 </li>
                 <li class="logo">
-                    <img class="corel" src="images/corel.png" alt="corel">
-                    <p>Corel</p>
+                    <img class="logo-image corel" src="images/corel.png" alt="corel">
+                    <p class="logo-title">Corel</p>
                 </li>
   
             </ul>    
@@ -177,33 +208,21 @@
 
     
     <!-- // Footer & contact info -->
-    <footer id="contact">
+    <footer id="contact" class="contact">
         <div class="content-wrap">
-            <h2>Let's Keep in Touch!</h2>
+            <h2 class="title">Let's Keep in Touch!</h2>
             
             <!-- Social media links. Add or remove any networks. -->
             <div class="contact-info">
-                <a target="_blank" rel="noopener noreferrer" href="mailto:beata.lochowska@gmail.com"><i class="fas fa-at"></i></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.artstation.com/beatalochowska"><i class="fab fa-artstation"></i></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/beatalochowska/"><i class="fab fa-linkedin-in"></i></a>
-                <a target="_blank" rel="noopener noreferrer" href=https://bitbucket.org/beatalochowska/><i class="fab fa-bitbucket"></i></a>
+                <a class="contact-info__link" target="_blank" rel="noopener noreferrer" href="mailto:beata.lochowska@gmail.com"><i class="fas fa-at"></i></a>
+                <a class="contact-info__link" target="_blank" rel="noopener noreferrer" href="https://www.artstation.com/beatalochowska"><i class="fab fa-artstation"></i></a>
+                <a class="contact-info__link" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/beatalochowska/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="contact-info__link" target="_blank" rel="noopener noreferrer" href="https://bitbucket.org/%7B8f333b0c-321f-4885-8076-f1b5379929b2%7D/"><i class="fab fa-bitbucket"></i></a>
             </div>
 
-            <p>Copyright 2019 by Beata Łochowska</p>
+            <p class="footer-text">Copyright 2020 by Beata Łochowska</p>
         </div>
     </footer>
-    <script>
-        (function() {
-            document.querySelectorAll(".menu a").forEach(function(element) {
-                element.addEventListener("click", function() {
-                    document.getElementsByTagName("BODY")[0].classList.remove("isMenuOpen");
-                });
-            })
-
-            document.getElementById("menuMobile").addEventListener("click", function() {
-                document.getElementsByTagName("BODY")[0].classList.toggle("isMenuOpen");
-            });
-        }())
-    </script>
+  
 </body>
 </html>
