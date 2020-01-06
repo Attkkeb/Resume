@@ -110,6 +110,7 @@ li {
 
 /* Navigation
 -----------------------------*/
+
 .menu {
   text-align: center;
   position: fixed;
@@ -127,7 +128,8 @@ li {
 .download {
   color: white;
   display: inline-block;
-
+  font-size: 2vw;
+  padding: 3px 5px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -136,13 +138,14 @@ li {
 .menu-item {
   color: white;
   transition: 0.3s;
-  padding: 15px 20px;
+  font-size: 2vw;
+  padding: 10px 1.5vw;
 }
 
 .download {
   background-color: #1dd2af;
   color: #2c3e50;
-  margin: 0 10px;
+  margin: 10px 10px;
   text-decoration: none;
   padding: 5px 10px;
   border: 1px solid #1dd2af;
@@ -239,17 +242,20 @@ li {
 .logo-image:hover + .logo-title {
   opacity: 1;
 }
-
 /* Media Queries
----------------------*/
-@media (max-width: 940px) {
+--------------------------- */
+@media (min-width: 1060px) {
   .menu-item {
-    padding: 15px 1.2vw;
+    font-size: 21px;
+    padding: 10px 25px;
   }
-  .download {
-    padding: 5px 1.2vw;
+
+  .menu-item.download {
+    font-size: 21px;
+    padding: 5px 10px;
   }
 }
+
 @media (min-width: 900px) {
   .col-narrow {
     width: 30%;
@@ -282,20 +288,34 @@ li {
     padding: 0;
   }
 }
-@media (min-width: 810px) {
+
+@media (min-width: 768px) {
   .menu-hidden {
     transform: translateY(-100%);
   }
 }
-@media (max-width: 809px) {
-  .logo-title {
-    display: none;
+@media (max-width: 767px) {
+  .position-title,
+  .school-title {
+    margin: 30px 0 10px;
   }
-  .logos {
-    flex-wrap: wrap;
+  .job-description .work-details {
+    margin-top: 15px;
   }
-  .logo {
-    padding: 5px;
+  .main-title {
+    padding-top: 10px;
+  }
+  .content-wrap.about-me {
+    padding: 10px 50px 60px;
+  }
+  .menu-item {
+    font-size: 21px;
+    padding: 10px 25px;
+  }
+
+  .menu-item.download {
+    font-size: 21px;
+    padding: 5px 10px;
   }
   .isMenuOpen .menu {
     transform: translateX(-100vw);
@@ -310,7 +330,6 @@ li {
     height: 100%;
     transition: transform 0.5s ease-in;
   }
-
   .burger {
     position: fixed;
     right: 10px;
@@ -325,6 +344,7 @@ li {
     width: 35px;
     height: 5px;
     background-color: white;
+    border: solid 1px #2c3e50;
     margin: 6px 0;
     transition: 0.4s;
   }
@@ -343,6 +363,7 @@ li {
     transform: rotate(45deg) translate(-9px, -8px);
   }
 }
+
 @media (max-width: 649px) {
   .logo {
     width: 33%;
@@ -353,6 +374,15 @@ li {
   }
   .page-header .title {
     font-size: 6.2vw;
+  }
+  .logo-title {
+    display: none;
+  }
+  .logos {
+    flex-wrap: wrap;
+  }
+  .logo {
+    padding: 5px;
   }
 }
 
