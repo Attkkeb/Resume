@@ -58,8 +58,9 @@ main h3 {
 .col-wide p {
   color: #b1bbc9;
 }
-.company-title {
+.job-title .company-title {
   text-transform: uppercase;
+  margin-top: 5px;
 }
 
 li {
@@ -172,6 +173,7 @@ li {
 }
 .job-description .work-details {
   margin-top: 0;
+  padding: 0;
 }
 
 /*Education
@@ -186,7 +188,7 @@ li {
 }
 
 .education .text {
-  margin-bottom: 0;
+  margin: 10px 0 0;
 }
 
 .education .text-date {
@@ -201,7 +203,7 @@ li {
   font-weight: 700;
 }
 .school-title {
-  margin-top: 30px;
+  margin: 30px 0 0;
 }
 
 /*Skills
